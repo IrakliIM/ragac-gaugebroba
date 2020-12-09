@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.projectx.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/layout_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notifications"
+            app:destination="@id/notificationsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFrag"
+        android:name="com.example.projectx.fragment.DashBoard"
+        android:label="DashBoard"
+        tools:layout="@layout/layout_dashboard"/>
+    <fragment
+        android:id="@+id/notificationsFrag"
+        android:name="com.example.projectx.fragment.Notifications"
+        android:label="Notifications"
+        tools:layout="@layout/layout_notifications">
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/farshevangiFragment"
+        android:name="com.example.projectx.fragment.FarshevangiFragment"
+        android:label="FarshevangiFragment"
+        tools:layout="@layout/layout_farshevangi"/>
+</navigation>
